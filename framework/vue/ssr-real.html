@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jrac&#39;s 前端技术文档</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="imgs/home_home.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.b6bfb1ac.css" as="style"><link rel="preload" href="/blog/assets/js/app.509e7815.js" as="script"><link rel="preload" href="/blog/assets/js/2.999af059.js" as="script"><link rel="preload" href="/blog/assets/js/20.4237a160.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.63bf3efd.js"><link rel="prefetch" href="/blog/assets/js/11.8939dd04.js"><link rel="prefetch" href="/blog/assets/js/12.4508db17.js"><link rel="prefetch" href="/blog/assets/js/13.c883dc1e.js"><link rel="prefetch" href="/blog/assets/js/14.558968c9.js"><link rel="prefetch" href="/blog/assets/js/15.c18f6a14.js"><link rel="prefetch" href="/blog/assets/js/16.6e59ac1c.js"><link rel="prefetch" href="/blog/assets/js/17.d811723f.js"><link rel="prefetch" href="/blog/assets/js/18.8c08a1d1.js"><link rel="prefetch" href="/blog/assets/js/19.f100c2a2.js"><link rel="prefetch" href="/blog/assets/js/21.e3ef736d.js"><link rel="prefetch" href="/blog/assets/js/22.6b68dd18.js"><link rel="prefetch" href="/blog/assets/js/23.ae5e47ec.js"><link rel="prefetch" href="/blog/assets/js/24.42b658ff.js"><link rel="prefetch" href="/blog/assets/js/25.8d86a814.js"><link rel="prefetch" href="/blog/assets/js/26.14c2790a.js"><link rel="prefetch" href="/blog/assets/js/27.62f4d850.js"><link rel="prefetch" href="/blog/assets/js/28.39687e64.js"><link rel="prefetch" href="/blog/assets/js/29.97577605.js"><link rel="prefetch" href="/blog/assets/js/3.6a3e3e5f.js"><link rel="prefetch" href="/blog/assets/js/30.418cd21c.js"><link rel="prefetch" href="/blog/assets/js/31.7117145f.js"><link rel="prefetch" href="/blog/assets/js/4.d6cdcb57.js"><link rel="prefetch" href="/blog/assets/js/5.4f712cfc.js"><link rel="prefetch" href="/blog/assets/js/6.d7e152ce.js"><link rel="prefetch" href="/blog/assets/js/7.184419e9.js"><link rel="prefetch" href="/blog/assets/js/8.b9a412db.js"><link rel="prefetch" href="/blog/assets/js/9.083baca9.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.b6bfb1ac.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Jrac's 前端技术文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/basic/js/modularity.html" class="nav-link">
+  Basic
+</a></div><div class="nav-item"><a href="/blog/server/node/node_api.html" class="nav-link">
+  Server
+</a></div><div class="nav-item"><a href="/blog/framework/vue/ssr.html" class="nav-link">
+  Framework
+</a></div><div class="nav-item"><a href="/blog/else/monorepo/main.html" class="nav-link">
+  Else
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/basic/js/modularity.html" class="nav-link">
+  Basic
+</a></div><div class="nav-item"><a href="/blog/server/node/node_api.html" class="nav-link">
+  Server
+</a></div><div class="nav-item"><a href="/blog/framework/vue/ssr.html" class="nav-link">
+  Framework
+</a></div><div class="nav-item"><a href="/blog/else/monorepo/main.html" class="nav-link">
+  Else
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Vue</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/framework/vue/ssr.html" class="sidebar-link">SSR 服务端渲染</a></li><li><a href="/blog/framework/vue/vuepress.html" class="sidebar-link">VuePress 使用教程</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>如果不是生产环境，并且在 yarn 执行项目的时候传入了 LOCAL_ENV 参数(dev/beta 都传了,分别传了 dev/beta)，执行local-rewrite-env(这个插件是公司的人写的)</p> <p><strong>local-rewrite-env</strong>
+具体使用见插件下的  README.md,就之前的版本做了哪些更新也很清晰
+作用貌似是使用配置文件来进行 node env 的配置，之前参数是写在 package.json 的 scripts 中的，这样很冗杂，抽成一个 js 或 json 就清晰很多。
+可以看详细文档 local-rewrite-env.md</p> <p><strong>确保存放日志文件 .log 的目录存在</strong>
+不存在就通过代码创建</p> <p><strong>保存项目路径到 commonUtil.js 中的一个变量 baseDir</strong></p> <p><strong>读取模板 html 文件内容</strong></p> <p><strong>先讲一下 function createRenderer</strong>
+首先这个方法理解为一个工厂函数，vue ssr 中 createRenderer  和 createBundleRenderer 都是用来创建 render 的，render 是什么，就是将 vue 实例渲染成 html 字符串。因为有多个地方要调用 createBundleRenderer 方法，并且大部分参数是复杂但相同的，所以我们把它抽取出来，处理成一个方法， 就是这里的 createRenderer。</p> <p>createBundleRenderer 的第一个参数是 bundle：这个其实就是以 entry-server.js 为入口打包生成的 bundle。（去看 ssr 教程就知道需要两个入口文件）
+第二个参数是一个配置对象：这里其实就是指定了一些配置，可以看到，方法中的配置优先级更高，传入的参数只用作补充。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">createRenderer</span><span class="token punctuation">(</span><span class="token parameter">bundle<span class="token punctuation">,</span> options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">createBundleRenderer</span><span class="token punctuation">(</span>
+    bundle<span class="token punctuation">,</span>
+    _<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      template<span class="token punctuation">,</span> <span class="token comment">// 模板文件</span>
+      <span class="token comment">// 缓存配置</span>
+      <span class="token literal-property property">cache</span><span class="token operator">:</span> <span class="token constant">LRU</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">max</span><span class="token operator">:</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">maxAge</span><span class="token operator">:</span> <span class="token number">1000</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">15</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token comment">// this is only needed when vue-server-renderer is npm-linked</span>
+      <span class="token literal-property property">basedir</span><span class="token operator">:</span> commonUtils<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'./dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token comment">// recommended for performance</span>
+      <span class="token literal-property property">runInNewContext</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>创建包装后的 render 函数</strong></p> <ul><li>如果是生产环境
+在打包后的 dist 文件夹下读取：</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 以 entry-server.js 入口打包生成的 bundle</span>
+<span class="token keyword">const</span> bundle <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./dist/vue-ssr-server-bundle.json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 以 entry-client.js 入口打包生成的 manifest</span>
+<span class="token keyword">const</span> clientManifest <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./dist/vue-ssr-client-manifest.json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>最后赋值给 renderer</p> <ul><li>不是生产环境
+引入一个方法并调用，在方法回调中创建，方法在 /build/setup-dev-server.js 文件中
+/build/setup-dev-server 详细内容参考 setup-dev-server.md</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.509e7815.js" defer></script><script src="/blog/assets/js/2.999af059.js" defer></script><script src="/blog/assets/js/20.4237a160.js" defer></script>
+  </body>
+</html>

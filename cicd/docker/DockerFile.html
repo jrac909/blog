@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CMD 和 ENTRYPOINT 的区别 | Jrac&#39;s 前端技术文档</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="imgs/home_home.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.dab10465.css" as="style"><link rel="preload" href="/blog/assets/js/app.d0cd04c6.js" as="script"><link rel="preload" href="/blog/assets/js/2.ab3d18b3.js" as="script"><link rel="preload" href="/blog/assets/js/14.d3441cb2.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.da15c793.js"><link rel="prefetch" href="/blog/assets/js/11.73da7b41.js"><link rel="prefetch" href="/blog/assets/js/12.4508db17.js"><link rel="prefetch" href="/blog/assets/js/13.e094c783.js"><link rel="prefetch" href="/blog/assets/js/15.ba762ceb.js"><link rel="prefetch" href="/blog/assets/js/16.c7c5cfb4.js"><link rel="prefetch" href="/blog/assets/js/17.589e1ac9.js"><link rel="prefetch" href="/blog/assets/js/18.74587141.js"><link rel="prefetch" href="/blog/assets/js/19.f6d88dc2.js"><link rel="prefetch" href="/blog/assets/js/20.55e5cb60.js"><link rel="prefetch" href="/blog/assets/js/21.916144e2.js"><link rel="prefetch" href="/blog/assets/js/22.8a05f14c.js"><link rel="prefetch" href="/blog/assets/js/23.3018200b.js"><link rel="prefetch" href="/blog/assets/js/24.e0e1af30.js"><link rel="prefetch" href="/blog/assets/js/25.0d24b0a7.js"><link rel="prefetch" href="/blog/assets/js/26.0c212d54.js"><link rel="prefetch" href="/blog/assets/js/27.54051f7c.js"><link rel="prefetch" href="/blog/assets/js/28.f142ed8f.js"><link rel="prefetch" href="/blog/assets/js/29.2ddf620c.js"><link rel="prefetch" href="/blog/assets/js/3.23f380c7.js"><link rel="prefetch" href="/blog/assets/js/30.df4f6778.js"><link rel="prefetch" href="/blog/assets/js/31.73afca0c.js"><link rel="prefetch" href="/blog/assets/js/32.48b9c904.js"><link rel="prefetch" href="/blog/assets/js/33.6c36ae22.js"><link rel="prefetch" href="/blog/assets/js/34.b94eff51.js"><link rel="prefetch" href="/blog/assets/js/35.2aaeee54.js"><link rel="prefetch" href="/blog/assets/js/36.1c4ead70.js"><link rel="prefetch" href="/blog/assets/js/37.d9f94543.js"><link rel="prefetch" href="/blog/assets/js/38.3e816bea.js"><link rel="prefetch" href="/blog/assets/js/39.81b702e1.js"><link rel="prefetch" href="/blog/assets/js/4.987baa04.js"><link rel="prefetch" href="/blog/assets/js/40.015849cd.js"><link rel="prefetch" href="/blog/assets/js/41.5567f825.js"><link rel="prefetch" href="/blog/assets/js/42.af93135d.js"><link rel="prefetch" href="/blog/assets/js/43.d964714b.js"><link rel="prefetch" href="/blog/assets/js/44.7e634282.js"><link rel="prefetch" href="/blog/assets/js/45.579e1b4f.js"><link rel="prefetch" href="/blog/assets/js/46.42996734.js"><link rel="prefetch" href="/blog/assets/js/47.10fe0064.js"><link rel="prefetch" href="/blog/assets/js/48.b1f0198b.js"><link rel="prefetch" href="/blog/assets/js/49.89b8323f.js"><link rel="prefetch" href="/blog/assets/js/5.d250cb53.js"><link rel="prefetch" href="/blog/assets/js/6.d7e152ce.js"><link rel="prefetch" href="/blog/assets/js/7.184419e9.js"><link rel="prefetch" href="/blog/assets/js/8.af0d9068.js"><link rel="prefetch" href="/blog/assets/js/9.083baca9.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.dab10465.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Jrac's 前端技术文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/interview/question/01.html" class="nav-link">
+  面试相关
+</a></div><div class="nav-item"><a href="/blog/cicd/docker/DockerFile.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  CICD
+</a></div><div class="nav-item"><a href="/blog/basic/js/modularity.html" class="nav-link">
+  Basic
+</a></div><div class="nav-item"><a href="/blog/UI/elementui/main.html" class="nav-link">
+  UI
+</a></div><div class="nav-item"><a href="/blog/server/node/node_basic.html" class="nav-link">
+  Server
+</a></div><div class="nav-item"><a href="/blog/framework/vue/ssr.html" class="nav-link">
+  Framework
+</a></div><div class="nav-item"><a href="/blog/else/monorepo/main.html" class="nav-link">
+  Else
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/interview/question/01.html" class="nav-link">
+  面试相关
+</a></div><div class="nav-item"><a href="/blog/cicd/docker/DockerFile.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  CICD
+</a></div><div class="nav-item"><a href="/blog/basic/js/modularity.html" class="nav-link">
+  Basic
+</a></div><div class="nav-item"><a href="/blog/UI/elementui/main.html" class="nav-link">
+  UI
+</a></div><div class="nav-item"><a href="/blog/server/node/node_basic.html" class="nav-link">
+  Server
+</a></div><div class="nav-item"><a href="/blog/framework/vue/ssr.html" class="nav-link">
+  Framework
+</a></div><div class="nav-item"><a href="/blog/else/monorepo/main.html" class="nav-link">
+  Else
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>docker</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/cicd/docker/DockerFile.html" aria-current="page" class="active sidebar-link">教程：DokcerFile 文件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/cicd/docker/DockerFile.html#cmd-和-entrypoint-的区别" class="sidebar-link">CMD 和 ENTRYPOINT 的区别</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>k8s</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="cmd-和-entrypoint-的区别"><a href="#cmd-和-entrypoint-的区别" class="header-anchor">#</a> CMD 和 ENTRYPOINT 的区别</h2> <p>这两个指令都可以执行命令，区别如下：</p> <ul><li>🐥 CMD: 指定这个容器启动的时候运行的命令，只有最后一个会生效，可被替代</li> <li>🐥 ENTRYPOINT: 指定这个容器启动的时候要运行的命令, 可以追加命令</li></ul> <h3 id="举例测试-cmd"><a href="#举例测试-cmd" class="header-anchor">#</a> 举例测试 CMD</h3> <p>🐸 <strong>1</strong> . 创建 DockerFile 文件，比如：dockerfile-cmd-test，内容如下：</p> <div class="language- extra-class"><pre class="language-text"><code># 一个简单的镜像：启动的时候执行命令 ls -a
+FROM centos
+CMD [&quot;ls&quot;, &quot;-a&quot;]
+</code></pre></div><p>🐸 <strong>2</strong>. 构建镜像</p> <div class="language- extra-class"><pre class="language-text"><code># -f 指定镜像文件；-t 指定构建的镜像名（也可以加 tag）
+docker build -f docker-file-test -t cmdtest
+</code></pre></div><p>🐸 <strong>3</strong>. 启动容器</p> <div class="language- extra-class"><pre class="language-text"><code># 可以看到在启动后，容器直接执行了 ls -a 命令，打印了当前文件夹下的文件信息
+docker run cmdtest
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>一般来说，我们在执行 run 命令的时候可以同时执行一些命令，比如 docker run -it sh &quot;while(true) do echo loop; done;&quot;</p></div> <p>🐸 <strong>4</strong>. 在启动容器的时候追加命令，比如：</p> <div class="language- extra-class"><pre class="language-text"><code># cmdtest 镜像中有 ls -a 命令，我们想在后面追加 -l 参数，所以在 run 的时候加一个 -l
+docker run cmdtest -l
+</code></pre></div><p>此时会报错。因为 cmd 的清理下 -l 替换了 CMD [&quot;ls&quot;, &quot;-a&quot;] 命令, -l 不是命令所以报错。所以，我们可以发现，run 中的命令会替换掉 DockerFile 文件中 CMD 的命令。因此我们想要在 docker run 正常替换，可以如下执行：</p> <div class="language- extra-class"><pre class="language-text"><code># 写一个完整的路径
+docker run cmdtest ls -al
+</code></pre></div><hr> <h3 id="举例测试-entrypoint"><a href="#举例测试-entrypoint" class="header-anchor">#</a> 举例测试 ENTRYPOINT</h3> <p>🐸 <strong>1</strong>. 创建 DockerFile 文件 dockerfile-entrypoint-test</p> <div class="language- extra-class"><pre class="language-text"><code># 同 CMD，只是指令替换为 ENTRYPOINT
+FROM  centos
+ENTRYPOINT [&quot;ls&quot;, &quot;-a&quot;]
+</code></pre></div><p>🐸 <strong>2</strong>. 构建镜像</p> <div class="language- extra-class"><pre class="language-text"><code>docker build -f dockerfile-entrypoint-test -t entrypointtest
+</code></pre></div><p>🐸 <strong>3</strong>. 启动容器</p> <div class="language- extra-class"><pre class="language-text"><code># 可以看到和 CMD 指令运行结果一样，看不出任何区别
+docker run entrypointtest
+</code></pre></div><p>🐸 <strong>4</strong>. 在启动容器的时候追加命令</p> <div class="language- extra-class"><pre class="language-text"><code>docker run entrypointtest -l
+</code></pre></div><p>可以看到最终的执行结果是：ls -al，也就是说 -l 参数被追加到了 ls -a 命令后面。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/blog/cicd/k8s/01.html">
+        教程：概念
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.d0cd04c6.js" defer></script><script src="/blog/assets/js/2.ab3d18b3.js" defer></script><script src="/blog/assets/js/14.d3441cb2.js" defer></script>
+  </body>
+</html>

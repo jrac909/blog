@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React 中不使用 jsx 来创建虚拟 dom | Jrac&#39;s 前端技术文档</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="imgs/home_home.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.dab10465.css" as="style"><link rel="preload" href="/blog/assets/js/app.d0cd04c6.js" as="script"><link rel="preload" href="/blog/assets/js/2.ab3d18b3.js" as="script"><link rel="preload" href="/blog/assets/js/26.0c212d54.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.da15c793.js"><link rel="prefetch" href="/blog/assets/js/11.73da7b41.js"><link rel="prefetch" href="/blog/assets/js/12.4508db17.js"><link rel="prefetch" href="/blog/assets/js/13.e094c783.js"><link rel="prefetch" href="/blog/assets/js/14.d3441cb2.js"><link rel="prefetch" href="/blog/assets/js/15.ba762ceb.js"><link rel="prefetch" href="/blog/assets/js/16.c7c5cfb4.js"><link rel="prefetch" href="/blog/assets/js/17.589e1ac9.js"><link rel="prefetch" href="/blog/assets/js/18.74587141.js"><link rel="prefetch" href="/blog/assets/js/19.f6d88dc2.js"><link rel="prefetch" href="/blog/assets/js/20.55e5cb60.js"><link rel="prefetch" href="/blog/assets/js/21.916144e2.js"><link rel="prefetch" href="/blog/assets/js/22.8a05f14c.js"><link rel="prefetch" href="/blog/assets/js/23.3018200b.js"><link rel="prefetch" href="/blog/assets/js/24.e0e1af30.js"><link rel="prefetch" href="/blog/assets/js/25.0d24b0a7.js"><link rel="prefetch" href="/blog/assets/js/27.54051f7c.js"><link rel="prefetch" href="/blog/assets/js/28.f142ed8f.js"><link rel="prefetch" href="/blog/assets/js/29.2ddf620c.js"><link rel="prefetch" href="/blog/assets/js/3.23f380c7.js"><link rel="prefetch" href="/blog/assets/js/30.df4f6778.js"><link rel="prefetch" href="/blog/assets/js/31.73afca0c.js"><link rel="prefetch" href="/blog/assets/js/32.48b9c904.js"><link rel="prefetch" href="/blog/assets/js/33.6c36ae22.js"><link rel="prefetch" href="/blog/assets/js/34.b94eff51.js"><link rel="prefetch" href="/blog/assets/js/35.2aaeee54.js"><link rel="prefetch" href="/blog/assets/js/36.1c4ead70.js"><link rel="prefetch" href="/blog/assets/js/37.d9f94543.js"><link rel="prefetch" href="/blog/assets/js/38.3e816bea.js"><link rel="prefetch" href="/blog/assets/js/39.81b702e1.js"><link rel="prefetch" href="/blog/assets/js/4.987baa04.js"><link rel="prefetch" href="/blog/assets/js/40.015849cd.js"><link rel="prefetch" href="/blog/assets/js/41.5567f825.js"><link rel="prefetch" href="/blog/assets/js/42.af93135d.js"><link rel="prefetch" href="/blog/assets/js/43.d964714b.js"><link rel="prefetch" href="/blog/assets/js/44.7e634282.js"><link rel="prefetch" href="/blog/assets/js/45.579e1b4f.js"><link rel="prefetch" href="/blog/assets/js/46.42996734.js"><link rel="prefetch" href="/blog/assets/js/47.10fe0064.js"><link rel="prefetch" href="/blog/assets/js/48.b1f0198b.js"><link rel="prefetch" href="/blog/assets/js/49.89b8323f.js"><link rel="prefetch" href="/blog/assets/js/5.d250cb53.js"><link rel="prefetch" href="/blog/assets/js/6.d7e152ce.js"><link rel="prefetch" href="/blog/assets/js/7.184419e9.js"><link rel="prefetch" href="/blog/assets/js/8.af0d9068.js"><link rel="prefetch" href="/blog/assets/js/9.083baca9.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.dab10465.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Jrac's 前端技术文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/interview/question/01.html" class="nav-link">
+  面试相关
+</a></div><div class="nav-item"><a href="/blog/cicd/docker/DockerFile.html" class="nav-link">
+  CICD
+</a></div><div class="nav-item"><a href="/blog/basic/js/modularity.html" class="nav-link">
+  Basic
+</a></div><div class="nav-item"><a href="/blog/UI/elementui/main.html" class="nav-link">
+  UI
+</a></div><div class="nav-item"><a href="/blog/server/node/node_basic.html" class="nav-link">
+  Server
+</a></div><div class="nav-item"><a href="/blog/framework/vue/ssr.html" class="nav-link">
+  Framework
+</a></div><div class="nav-item"><a href="/blog/else/monorepo/main.html" class="nav-link">
+  Else
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/interview/question/01.html" class="nav-link">
+  面试相关
+</a></div><div class="nav-item"><a href="/blog/cicd/docker/DockerFile.html" class="nav-link">
+  CICD
+</a></div><div class="nav-item"><a href="/blog/basic/js/modularity.html" class="nav-link">
+  Basic
+</a></div><div class="nav-item"><a href="/blog/UI/elementui/main.html" class="nav-link">
+  UI
+</a></div><div class="nav-item"><a href="/blog/server/node/node_basic.html" class="nav-link">
+  Server
+</a></div><div class="nav-item"><a href="/blog/framework/vue/ssr.html" class="nav-link">
+  Framework
+</a></div><div class="nav-item"><a href="/blog/else/monorepo/main.html" class="nav-link">
+  Else
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>React</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/framework/react/basic.html" class="sidebar-link">基础教程</a></li><li><a href="/blog/framework/react/jsx.html" aria-current="page" class="active sidebar-link">JSX 基础知识拓展</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/framework/react/jsx.html#react-中不使用-jsx-来创建虚拟-dom" class="sidebar-link">React 中不使用 jsx 来创建虚拟 dom</a></li><li class="sidebar-sub-header"><a href="/blog/framework/react/jsx.html#react-中不使用-jsx-来创建一个嵌套的虚拟-dom" class="sidebar-link">React 中不使用 jsx 来创建一个嵌套的虚拟 dom</a></li><li class="sidebar-sub-header"><a href="/blog/framework/react/jsx.html#jsx-语法规则" class="sidebar-link">jsx 语法规则</a></li><li class="sidebar-sub-header"><a href="/blog/framework/react/jsx.html#xml-扩展知识" class="sidebar-link">xml 扩展知识</a></li><li class="sidebar-sub-header"><a href="/blog/framework/react/jsx.html#js-表达式和语句的区别" class="sidebar-link">js 表达式和语句的区别</a></li></ul></li><li><a href="/blog/framework/react/module.html" class="sidebar-link">组件与模块知识拓展</a></li><li><a href="/blog/framework/react/devtool.html" class="sidebar-link">开发者工具的使用</a></li><li><a href="/blog/framework/react/funccomponent.html" class="sidebar-link">React 函数式组件</a></li><li><a href="/blog/framework/react/classcomponent.html" class="sidebar-link">类组件及类的基本知识复习</a></li><li><a href="/blog/framework/react/state.html" class="sidebar-link">React 状态 state</a></li><li><a href="/blog/framework/react/props.html" class="sidebar-link">React props</a></li><li><a href="/blog/framework/react/refs.html" class="sidebar-link">React refs</a></li><li><a href="/blog/framework/react/component.html" class="sidebar-link">React 组件相关内容</a></li><li><a href="/blog/framework/react/complexfunc.html" class="sidebar-link">补充内容 - 高阶组件和函数柯里化</a></li><li><a href="/blog/framework/react/life.html" class="sidebar-link">组件的生命周期</a></li><li><a href="/blog/framework/react/diff.html" class="sidebar-link">React 的 Diff 算法</a></li><li><a href="/blog/framework/react/脚手架.html" class="sidebar-link">React 脚手架</a></li><li><a href="/blog/framework/react/组件传参.html" class="sidebar-link">React 组件传参</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="react-中不使用-jsx-来创建虚拟-dom"><a href="#react-中不使用-jsx-来创建虚拟-dom" class="header-anchor">#</a> React 中不使用 jsx 来创建虚拟 dom</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">&quot;utf-8&quot;</span><span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>hello react<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 准备一个容器 <span class="token operator">--</span><span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;test&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 引入 react 核心库 <span class="token operator">--</span><span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">&quot;text/javascript&quot;</span> src<span class="token operator">=</span><span class="token string">&quot;../js/react.development.js&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 引入 react dom 扩展库 <span class="token operator">--</span><span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">&quot;text/javascript&quot;</span> src<span class="token operator">=</span><span class="token string">&quot;../js/react-dom.development.js&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+	
+	<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">&quot;text/javascript&quot;</span><span class="token operator">&gt;</span>
+		<span class="token comment">// 1. 创建虚拟 dom</span>
+        <span class="token comment">// const VDOM = React.createElement(标签名, 标签属性, 标签内容);</span>
+		<span class="token keyword">const</span> <span class="token constant">VDOM</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'h1'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'test'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'Hello, React'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token comment">// 2. 渲染虚拟 dom 到页面</span>
+		ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token constant">VDOM</span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre></div><p>注意：</p> <ol><li>不需要 babel 进行转换了</li> <li>script 标签上的 type 需要用 javascript</li> <li>利用 React.createElement api 来创建虚拟 dom</li></ol> <h2 id="react-中不使用-jsx-来创建一个嵌套的虚拟-dom"><a href="#react-中不使用-jsx-来创建一个嵌套的虚拟-dom" class="header-anchor">#</a> React 中不使用 jsx 来创建一个嵌套的虚拟 dom</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">&quot;text/javascript&quot;</span><span class="token operator">&gt;</span>
+		<span class="token comment">// 1. 创建虚拟 dom</span>
+		<span class="token keyword">const</span> <span class="token constant">VDOM</span> <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">'test'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'span'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'Hello, React'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token comment">// 2. 渲染虚拟 dom 到页面</span>
+		ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token constant">VDOM</span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><p>可以看到，这样需要一直不停的用 React.createElement api 来进行嵌套，这对于复杂结构是非常麻烦的。</p> <p>注意：</p> <ol><li>jsx 代码经过 babel 转换后最终还是 React.createElement 代码，所以 jsx 其实就是 React.createElement 的一个语法糖</li></ol> <h2 id="jsx-语法规则"><a href="#jsx-语法规则" class="header-anchor">#</a> jsx 语法规则</h2> <p>全称是 javascript xml</p> <ol><li>定义虚拟 dom 时，不要用引号</li> <li>标签中混入 js 表达式时要用{}</li> <li>样式的类名指定不要用 class，要用 className</li> <li>内联样式，要用双花括号 key: value 的形式去写</li> <li>虚拟 dom 必须只有一个根标签</li> <li>标签必须闭合（自闭合也可以）</li> <li>标签首字母：
+<ul><li>如果是小写字母开头，则将该标签转为 html 中同名元素，如果 html 没有这个标签，则报错</li> <li>如果是大写字母开头，react 就去渲染对应的组件，如果这个组件没有定义，则报错</li></ul></li></ol> <h3 id="混入-js-表达式"><a href="#混入-js-表达式" class="header-anchor">#</a> 混入 js 表达式</h3> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">const</span> id <span class="token operator">=</span> <span class="token string">'test'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> content <span class="token operator">=</span> <span class="token string">'hello'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> vdom <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">id</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>id<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token punctuation">{</span> content <span class="token punctuation">}</span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</code></pre></div><h3 id="jsx-写内联样式"><a href="#jsx-写内联样式" class="header-anchor">#</a> jsx 写内联样式</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> vdom <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">'white'</span><span class="token punctuation">;</span> fontSize<span class="token operator">:</span> <span class="token string">'14px'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>hello<span class="token punctuation">,</span> react<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h2 id="xml-扩展知识"><a href="#xml-扩展知识" class="header-anchor">#</a> xml 扩展知识</h2> <ul><li>xml 早期用于存储和传输数据</li></ul> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>student</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>Tom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>student</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ul><li>后面出现了 json，成为了更为好用、流行的数据格式。当然也不是完全不用 xml 了，比如微信公众号。</li></ul> <h2 id="js-表达式和语句的区别"><a href="#js-表达式和语句的区别" class="header-anchor">#</a> js 表达式和语句的区别</h2> <ol><li><p>表达式：一个表达式会产生一个值, 可以放在任何一个需要值的地方，比如：
+(1). a
+(2). a + b
+(3). demo(1); 调用函数
+(4). arr.map();
+(5). function test() {}; // 定义一个函数也是表达式</p></li> <li><p>语句：
+(1). if() {}
+(2). for() {}
+(3). switch() { case: }</p></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/framework/react/basic.html" class="prev">
+        基础教程
+      </a></span> <span class="next"><a href="/blog/framework/react/module.html">
+        组件与模块知识拓展
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.d0cd04c6.js" defer></script><script src="/blog/assets/js/2.ab3d18b3.js" defer></script><script src="/blog/assets/js/26.0c212d54.js" defer></script>
+  </body>
+</html>

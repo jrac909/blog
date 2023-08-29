@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>node 为什么不能调用 window、document 等 api | Jrac&#39;s 前端技术文档</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="imgs/home_home.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.dab10465.css" as="style"><link rel="preload" href="/blog/assets/js/app.d0cd04c6.js" as="script"><link rel="preload" href="/blog/assets/js/2.ab3d18b3.js" as="script"><link rel="preload" href="/blog/assets/js/44.7e634282.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.da15c793.js"><link rel="prefetch" href="/blog/assets/js/11.73da7b41.js"><link rel="prefetch" href="/blog/assets/js/12.4508db17.js"><link rel="prefetch" href="/blog/assets/js/13.e094c783.js"><link rel="prefetch" href="/blog/assets/js/14.d3441cb2.js"><link rel="prefetch" href="/blog/assets/js/15.ba762ceb.js"><link rel="prefetch" href="/blog/assets/js/16.c7c5cfb4.js"><link rel="prefetch" href="/blog/assets/js/17.589e1ac9.js"><link rel="prefetch" href="/blog/assets/js/18.74587141.js"><link rel="prefetch" href="/blog/assets/js/19.f6d88dc2.js"><link rel="prefetch" href="/blog/assets/js/20.55e5cb60.js"><link rel="prefetch" href="/blog/assets/js/21.916144e2.js"><link rel="prefetch" href="/blog/assets/js/22.8a05f14c.js"><link rel="prefetch" href="/blog/assets/js/23.3018200b.js"><link rel="prefetch" href="/blog/assets/js/24.e0e1af30.js"><link rel="prefetch" href="/blog/assets/js/25.0d24b0a7.js"><link rel="prefetch" href="/blog/assets/js/26.0c212d54.js"><link rel="prefetch" href="/blog/assets/js/27.54051f7c.js"><link rel="prefetch" href="/blog/assets/js/28.f142ed8f.js"><link rel="prefetch" href="/blog/assets/js/29.2ddf620c.js"><link rel="prefetch" href="/blog/assets/js/3.23f380c7.js"><link rel="prefetch" href="/blog/assets/js/30.df4f6778.js"><link rel="prefetch" href="/blog/assets/js/31.73afca0c.js"><link rel="prefetch" href="/blog/assets/js/32.48b9c904.js"><link rel="prefetch" href="/blog/assets/js/33.6c36ae22.js"><link rel="prefetch" href="/blog/assets/js/34.b94eff51.js"><link rel="prefetch" href="/blog/assets/js/35.2aaeee54.js"><link rel="prefetch" href="/blog/assets/js/36.1c4ead70.js"><link rel="prefetch" href="/blog/assets/js/37.d9f94543.js"><link rel="prefetch" href="/blog/assets/js/38.3e816bea.js"><link rel="prefetch" href="/blog/assets/js/39.81b702e1.js"><link rel="prefetch" href="/blog/assets/js/4.987baa04.js"><link rel="prefetch" href="/blog/assets/js/40.015849cd.js"><link rel="prefetch" href="/blog/assets/js/41.5567f825.js"><link rel="prefetch" href="/blog/assets/js/42.af93135d.js"><link rel="prefetch" href="/blog/assets/js/43.d964714b.js"><link rel="prefetch" href="/blog/assets/js/45.579e1b4f.js"><link rel="prefetch" href="/blog/assets/js/46.42996734.js"><link rel="prefetch" href="/blog/assets/js/47.10fe0064.js"><link rel="prefetch" href="/blog/assets/js/48.b1f0198b.js"><link rel="prefetch" href="/blog/assets/js/49.89b8323f.js"><link rel="prefetch" href="/blog/assets/js/5.d250cb53.js"><link rel="prefetch" href="/blog/assets/js/6.d7e152ce.js"><link rel="prefetch" href="/blog/assets/js/7.184419e9.js"><link rel="prefetch" href="/blog/assets/js/8.af0d9068.js"><link rel="prefetch" href="/blog/assets/js/9.083baca9.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.dab10465.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Jrac's 前端技术文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/interview/question/01.html" class="nav-link">
+  面试相关
+</a></div><div class="nav-item"><a href="/blog/cicd/docker/DockerFile.html" class="nav-link">
+  CICD
+</a></div><div class="nav-item"><a href="/blog/basic/js/modularity.html" class="nav-link">
+  Basic
+</a></div><div class="nav-item"><a href="/blog/UI/elementui/main.html" class="nav-link">
+  UI
+</a></div><div class="nav-item"><a href="/blog/server/node/node_basic.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Server
+</a></div><div class="nav-item"><a href="/blog/framework/vue/ssr.html" class="nav-link">
+  Framework
+</a></div><div class="nav-item"><a href="/blog/else/monorepo/main.html" class="nav-link">
+  Else
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/interview/question/01.html" class="nav-link">
+  面试相关
+</a></div><div class="nav-item"><a href="/blog/cicd/docker/DockerFile.html" class="nav-link">
+  CICD
+</a></div><div class="nav-item"><a href="/blog/basic/js/modularity.html" class="nav-link">
+  Basic
+</a></div><div class="nav-item"><a href="/blog/UI/elementui/main.html" class="nav-link">
+  UI
+</a></div><div class="nav-item"><a href="/blog/server/node/node_basic.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Server
+</a></div><div class="nav-item"><a href="/blog/framework/vue/ssr.html" class="nav-link">
+  Framework
+</a></div><div class="nav-item"><a href="/blog/else/monorepo/main.html" class="nav-link">
+  Else
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Node</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/server/node/node_basic.html" aria-current="page" class="active sidebar-link">Node 问题汇总</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/server/node/node_api.html" class="sidebar-link">Node Api</a></li><li><a href="/blog/server/node/express.html" class="sidebar-link">Express</a></li><li><a href="/blog/server/node/yarn.html" class="sidebar-link">Yarn</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Pm2</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Script</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="node-为什么不能调用-window、document-等-api"><a href="#node-为什么不能调用-window、document-等-api" class="header-anchor">#</a> node 为什么不能调用 window、document 等 api</h3> <p>js 只能在运行环境中才能被执行，那什么是运行环境呢，现在最为熟悉的运行环境有两个：</p> <ul><li>浏览器</li> <li>node</li></ul> <p>运行环境又主要由 js 引擎和内置 api 组成。js 引擎我们比较熟悉，比如 v8 引擎，由于它的执行效率高，chrome 浏览器和 node 都采用 v8 作为他们的 js 引擎。而内置 api，就是运行环境给 js 提供的，让其能够对运行环境做相应操作的 api，比如浏览器中的内置 api 有：dom、bom、XmlHttpRequest, 这些 api 使得 js 能够操作浏览器。同理，node 也会提供一些内置 api，以便 js 能操作 node 环境，比如读写文件、数据库等，其常见的内置 api 模块有：http、fs、path。所以，js 运行在 node 运行环境下，肯定无法调用浏览器运行环境提供的内置 api。</p> <p>备注：js 在浏览器中运行，使得我们可以编写前端代码，那 js 在 node 中运行，其实就是为我们提供了 js 编写后端代码的运行环境。</p> <h3 id="node-js-提供了哪些功能"><a href="#node-js-提供了哪些功能" class="header-anchor">#</a> node.js 提供了哪些功能？</h3> <p>Node.js 作为一个 js 的运行环境，仅仅提供了基础的功能和 api，然而，基于 nodejs 提供的这些基础功能，开发了很多强大的工具和框架，前端程序员可以胜任更多的工作和岗位。</p> <ul><li>express：快速构建 web 应用。</li> <li>electron：可以构建跨平台的桌面应用。</li> <li>restify：快速构建 api 接口项目。</li> <li>读写和操作数据库、创建实用的命令行工具辅助前端开发等等。</li></ul> <h3 id="node-中使用-fs-模块-在写文件路径的时候-为什么经常借助内置模块拼接-而不是直接用-js-的字符串拼接"><a href="#node-中使用-fs-模块-在写文件路径的时候-为什么经常借助内置模块拼接-而不是直接用-js-的字符串拼接" class="header-anchor">#</a> node 中使用 fs 模块，在写文件路径的时候，为什么经常借助内置模块拼接，而不是直接用 js 的字符串拼接？</h3> <p>因为在使用 fs 模块操作文件时，如果提供的路径是以 ./ 或 ../ 开头的相对路径，很容易出现路径动态拼接错误的问题。代码在运行的时候，会以执行 node 命令时候所处的目录，动态拼接文件的完整路径。比如：
+现在有文件目录 aaa/bbb，bbb 文件夹下有 index.js 和 1.txt，这时候，在 index.js 中用 readFile('./1.txt') 读取文件。然后我们在 bbb 文件夹中执行 indexjs，这时候没错，因为会以 bbb 为基础拼接 ./1.txt，但是如果这时候到 aaa 执行 indexjs，就会报错，因为 aaa 下面没有 1.txt。</p> <p>【解决问题】
+方法一：提供一个完整的文件存放路径（这种肯定不可能在实际应用中用）
+方法二：使用 __dirname，这个就是当前文件所在的完整目录</p> <h3 id="什么是客户端-什么是服务器-node-怎么提供-web-服务"><a href="#什么是客户端-什么是服务器-node-怎么提供-web-服务" class="header-anchor">#</a> 什么是客户端，什么是服务器？node 怎么提供 web 服务？</h3> <p>在网络节点中，负责消耗资源的电脑，叫做客户端；负责对外提供网络资源的电脑，叫做服务器。</p> <p>服务器和普通电脑的区别在于，服务器上安装了 web 服务器软件，例如：iis，apache 等，通过安装这些服务器软件，就能把一台普通的电脑变成一台 web 服务器了。在 nodejs 中，我们可以基于 nodejs 提供的 http 模块，通过几行简单的代码，就能轻松的手写一个服务器软件，从而对外提供 web 服务。</p> <p>http 模块是 node 官方提供的、用来创建 web 服务器的模块，通过 http 模块提供的 createServer 方法，就能方便的把一台普通的电脑，变成一台 web 服务器。</p> <h3 id="nodejs-中的模块化规范是什么"><a href="#nodejs-中的模块化规范是什么" class="header-anchor">#</a> nodejs 中的模块化规范是什么？</h3> <p>nodejs 遵循了 commonjs 的模块化规范：</p> <ol><li>每个模块内部，module 变量代表当前模块</li> <li>module 变量是一个对象，它的 exports 属性是对外的借口，加载某个模块，其实就是夹在该模块的 module.exports 属性，require 方法用于加载模块</li></ol> <h3 id="nodejs-中的模块化-require-的本质是什么内容"><a href="#nodejs-中的模块化-require-的本质是什么内容" class="header-anchor">#</a> nodejs 中的模块化，require 的本质是什么内容？</h3> <p>！require() 模块时，得到的永远是 module.exports 指向的对象。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/blog/server/node/node_api.html">
+        Node Api
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.d0cd04c6.js" defer></script><script src="/blog/assets/js/2.ab3d18b3.js" defer></script><script src="/blog/assets/js/44.7e634282.js" defer></script>
+  </body>
+</html>
